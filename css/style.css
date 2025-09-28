@@ -1,0 +1,129 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+  background-image: repeating-linear-gradient(
+      90deg,
+      hsla(57, 0%, 42%, 0.09) 0px,
+      hsla(57, 0%, 42%, 0.09) 1px,
+      transparent 1px,
+      transparent 60px
+    ),
+    repeating-linear-gradient(
+      0deg,
+      hsla(57, 0%, 42%, 0.09) 0px,
+      hsla(57, 0%, 42%, 0.09) 1px,
+      transparent 1px,
+      transparent 60px
+    ),
+    repeating-linear-gradient(
+      0deg,
+      hsla(57, 0%, 42%, 0.09) 0px,
+      hsla(57, 0%, 42%, 0.09) 1px,
+      transparent 1px,
+      transparent 10px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      hsla(57, 0%, 42%, 0.09) 0px,
+      hsla(57, 0%, 42%, 0.09) 1px,
+      transparent 1px,
+      transparent 10px
+    ),
+    linear-gradient(90deg, rgb(20, 20, 20), rgb(20, 20, 20));
+}
+
+.center {
+  display: flex;
+  justify-content: space-around;
+  align-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  height: 600px;
+  width: 700px;
+  border-radius: 20px;
+  border: solid 4px;
+}
+
+.card {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  height: 270px;
+  width: 180px;
+  border-radius: 20px;
+  color: #fff;
+  background: #000;
+  transition: 0.5s linear;
+  flex-direction: column;
+  border: #fff solid 1px;
+}
+
+.card-image img {
+  width: 170px;
+  height: 150px;
+  border-radius: 20px;
+}
+
+.card:hover {
+  transform: scale(1.1);
+}
+
+a {
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+  position: relative;
+}
+
+a::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background: #fff;
+  bottom: -4px;
+  transition: 0.5s;
+}
+
+a:hover::before {
+  width: 100%;
+}
+
+@media (max-width: 767px) {
+  body {
+    height: 1400px;
+  }
+
+  .center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    height: 1500px;
+    border-radius: 20px;
+    flex-direction: column;
+    border: none;
+  }
+
+  .card {
+    margin-top: 20px;
+    height: 220px;
+  }
+
+  .num1 {
+    margin-top: 60px;
+  }
+}
